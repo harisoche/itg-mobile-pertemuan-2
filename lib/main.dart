@@ -7,13 +7,24 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  static const String routeInfo = '/info';
+  static const String routeCounter = '/counter';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Navigation Demo',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
-      home: const HomeMenuPage(),
+
+      // halaman utama yang ditampilkan saat aplikasi dijalankan
+      initialRoute: '/',
+      // daftar rute yang tersedia dalam aplikasi
+      routes: {
+        '/': (context) => const HomeMenuPage(),
+        routeInfo: (context) => const InfoPage(),
+        routeCounter: (context) => const CounterPage(),
+      },
     );
   }
 }
@@ -32,20 +43,14 @@ class HomeMenuPage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const InfoPage()),
-                );
+                Navigator.pushNamed(context, MyApp.routeInfo);
               },
               child: const Text('Buka Stateless Page'),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const CounterPage()),
-                );
+                Navigator.pushNamed(context, MyApp.routeCounter);
               },
               child: const Text('Buka Stateful Page'),
             ),
