@@ -11,10 +11,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Navigation Demo',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
-      home: Scaffold(
-        body: Center(
-          child: const Text("Hello Flutter!"),
-        ),
+      home: const Hello(),
+    );
+  }
+}
+
+class Hello extends StatelessWidget {
+  const Hello({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: const Text("Hello Flutter!"),
       ),
     );
   }
