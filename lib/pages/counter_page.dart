@@ -11,6 +11,12 @@ class _CounterPageState extends State<CounterPage> {
   int count = 0;
 
   void tambah() => setState(() => count++);
+  // Tugas: Buat fungsi untuk mengurangi nilai count, pastikan tidak bisa kurang dari 0
+  // Saya menambahkan fungsi `kurang` yang akan mengurangi nilai `count` jika `count` lebih besar dari 0. 
+  // Jika `count` sudah 0, maka fungsi ini tidak akan melakukan apa-apa.
+  void kurang() {
+    if (count > 0) setState(() => count--);
+  } 
   void reset() => setState(() => count = 0);
 
   @override
@@ -32,6 +38,10 @@ class _CounterPageState extends State<CounterPage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ElevatedButton(onPressed: tambah, child: const Text('Tambah')),
+                const SizedBox(width: 12),
+                // Tugas: Tambahkan tombol untuk mengurangi nilai count, pastikan memanggil fungsi yang sudah dibuat
+                // Saya menambahkan tombol `Kurang` yang akan memanggil fungsi `kurang` ketika ditekan.
+                ElevatedButton(onPressed: kurang, child: const Text('Kurang')),
                 const SizedBox(width: 12),
                 OutlinedButton(onPressed: reset, child: const Text('Reset')),
               ],
