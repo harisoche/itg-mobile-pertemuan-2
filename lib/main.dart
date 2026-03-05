@@ -45,7 +45,7 @@ class HomeMenuPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, MyApp.routeInfo);
               },
-              child: const Text('Buka Stateless Page'),
+              child: const Text('Buka Stateless Pages'),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
