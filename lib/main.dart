@@ -33,7 +33,11 @@ class HomeMenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menu')),
+      appBar: AppBar(
+        title: const Text('Menu Utama'),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -43,14 +47,24 @@ class HomeMenuPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, MyApp.routeInfo);
               },
-              child: const Text('Buka Halaman Info (Stateless)'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 15),
+              ),
+              child: const Text('Buka Halaman Info'),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, MyApp.routeCounter);
               },
-              child: const Text('Buka Halaman Counter (Stateful)'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 15),
+              ),
+              child: const Text('Buka Halaman Counter'),
             ),
           ],
         ),
@@ -68,36 +82,53 @@ class InfoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Halaman Info'),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'Data Mahasiswa',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.indigo.shade50,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Colors.indigo.shade200),
               ),
               child: Column(
                 children: [
-                  Text(
-                    'Nama: Salma Aulia Nisa',
-                    style: const TextStyle(fontSize: 18),
+                  const Text(
+                    'Data Mahasiswa',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.indigo,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.person, color: Colors.indigo),
+                      const SizedBox(width: 10),
+                      Text(
+                        'Salma Aulia Nisa',
+                        style: TextStyle(fontSize: 16, color: Colors.indigo.shade900),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 10),
-                  Text(
-                    'NIM: 2306143',
-                    style: const TextStyle(fontSize: 18),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.numbers, color: Colors.indigo),
+                      const SizedBox(width: 10),
+                      Text(
+                        '2306143',
+                        style: TextStyle(fontSize: 16, color: Colors.indigo.shade900),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -145,32 +176,35 @@ class _CounterPageState extends State<CounterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Halaman Counter'),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'Nilai Counter:',
-              style: TextStyle(fontSize: 20),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              '$_counter',
-              style: const TextStyle(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-                color: Colors.indigo,
+            Container(
+              padding: const EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                color: Colors.indigo.shade50,
+                shape: BoxShape.circle,
+              ),
+              child: Text(
+                '$_counter',
+                style: const TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.indigo,
+                ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
                   onPressed: _decrementCounter,
                   tooltip: 'Kurangi',
-                  heroTag: 'decrement',
                   backgroundColor: _counter > 0 ? Colors.indigo : Colors.grey,
                   child: const Icon(Icons.remove),
                 ),
@@ -178,7 +212,6 @@ class _CounterPageState extends State<CounterPage> {
                 FloatingActionButton(
                   onPressed: _incrementCounter,
                   tooltip: 'Tambah',
-                  heroTag: 'increment',
                   backgroundColor: Colors.indigo,
                   child: const Icon(Icons.add),
                 ),
