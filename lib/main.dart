@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/info_page.dart';
 import 'pages/counter_page.dart';
 
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,6 +10,7 @@ class MyApp extends StatelessWidget {
 
   static const String routeInfo = '/info';
   static const String routeCounter = '/counter';
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeMenuPage(),
         routeInfo: (context) => const InfoPage(),
         routeCounter: (context) => const CounterPage(),
+        
+       
       },
     );
   }
