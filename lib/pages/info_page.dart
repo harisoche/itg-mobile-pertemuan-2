@@ -12,14 +12,18 @@ class InfoPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            Text(
-              'Ini StatelessWidget',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            Center(
+              child: Text(
+                'Jujun Munawar _ 2306148',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
             ),
             SizedBox(height: 8),
-            Text(
-              'Halaman ini tidak menyimpan state yang berubah.',
-              style: TextStyle(fontSize: 16),
+            Center(
+              child: Text(
+                'Welcome to Mobile',
+                style: TextStyle(fontSize: 16),
+              ),
             ),
           ],
         ),
