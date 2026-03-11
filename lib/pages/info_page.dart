@@ -18,7 +18,7 @@ class InfoPage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              'Halaman ini tidak menyimpan state yang berubah.',
+              'Muhamad Chikal Ubaidillah Nurhasan - 2306158',
               style: TextStyle(fontSize: 16),
             ),
           ],
