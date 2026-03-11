@@ -13,12 +13,12 @@ class InfoPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              'Ini StatelessWidget',
+              'Fadilah Nur Fatimah',
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
             Text(
-              'Halaman ini tidak menyimpan state yang berubah.',
+              'Fadilah Nur Fatimah 2306109',
               style: TextStyle(fontSize: 16),
             ),
           ],
