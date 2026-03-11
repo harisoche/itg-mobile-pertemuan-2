@@ -1,4 +1,4 @@
-package itg.prak.mobile.pertemuan_2
+package com.example.pertemuan2
 
 import io.flutter.embedding.android.FlutterActivity
 
