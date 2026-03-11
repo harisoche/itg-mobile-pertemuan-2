@@ -6,20 +6,21 @@ class InfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Stateless Page')),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
+      appBar: AppBar(
+        title: const Text("Stateless Page"),
+      ),
+      body: const Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
             Text(
-              'Ini StatelessWidget',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              "Nama: Fitri Patonah",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 10),
             Text(
-              'Halaman ini tidak menyimpan state yang berubah.',
-              style: TextStyle(fontSize: 16),
+              "NIM: 2306150",
+              style: TextStyle(fontSize: 20),
             ),
           ],
         ),
