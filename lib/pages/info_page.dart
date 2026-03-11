@@ -18,6 +18,7 @@ class InfoPage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
+              
               'Dzikra Ilham Illahi_2306121',
               style: TextStyle(fontSize: 16),
             ),
