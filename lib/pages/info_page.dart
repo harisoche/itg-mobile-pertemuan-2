@@ -25,7 +25,7 @@ class InfoPage extends StatelessWidget {
 
             Text('NIM : 2306142', style: TextStyle(fontSize: 20)),
 
-            Text('Kelas : Teknik Informatika (6E)', style: TextStyle(fontSize: 20)),
+            Text('Kelas : Teknik Informatika (E)', style: TextStyle(fontSize: 20)),
           ],
         ),
       ),
