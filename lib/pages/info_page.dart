@@ -10,15 +10,15 @@ class InfoPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Text(
-              'Ini StatelessWidget',
+              'Vito Gunawan',
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
             Text(
-              'Halaman ini tidak menyimpan state yang berubah.',
+              'Saya Memiliki NIM:2306149 ',
               style: TextStyle(fontSize: 16),
             ),
           ],
