@@ -11,6 +11,11 @@ class _CounterPageState extends State<CounterPage> {
   int count = 0;
 
   void tambah() => setState(() => count++);
+  void kurang() {
+  if (count > 0) {
+    setState(() => count--);
+    }
+  }
   void reset() => setState(() => count = 0);
 
   @override
@@ -32,6 +37,8 @@ class _CounterPageState extends State<CounterPage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ElevatedButton(onPressed: tambah, child: const Text('Tambah')),
+                const SizedBox(width: 12),
+                ElevatedButton(onPressed: kurang, child: const Text('Kurang')),
                 const SizedBox(width: 12),
                 OutlinedButton(onPressed: reset, child: const Text('Reset')),
               ],
