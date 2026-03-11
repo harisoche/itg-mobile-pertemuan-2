@@ -23,6 +23,7 @@ class InfoPage extends StatelessWidget {
             ),
           ],
           
+          
         ),
       ),
     );
