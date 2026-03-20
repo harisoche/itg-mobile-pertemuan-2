@@ -12,7 +12,7 @@ class _CounterPageState extends State<CounterPage> {
 
   void tambah() => setState(() => count++);
   void reset() => setState(() => count = 0);
-
+  void kurang() => setState((){if (count > 0) count--;}); 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +31,41 @@ class _CounterPageState extends State<CounterPage> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                ElevatedButton(onPressed: tambah, child: const Text('Tambah')),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    side: const BorderSide(color: Colors.black87),
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    padding:const EdgeInsetsDirectional.symmetric(horizontal: 12,vertical: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20))), 
+                onPressed: tambah,
+                icon:const Icon(Icons.add),
+                label: const Text('Tambah')),
                 const SizedBox(width: 12),
-                OutlinedButton(onPressed: reset, child: const Text('Reset')),
+
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                  side: const BorderSide(color: Colors.black87),
+                  backgroundColor: Colors.blueGrey,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20))), 
+                onPressed: reset, icon: const Icon(Icons.refresh), 
+                label: const Text('Reset')),
+                const SizedBox(width: 12),
+
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    side: const BorderSide(color: Colors.black87),
+                    backgroundColor: Colors.redAccent,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 14),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20))), 
+                onPressed: kurang, icon: const Icon(Icons.remove), 
+                label: const Text('Kurang')),
               ],
             ),
           ],
