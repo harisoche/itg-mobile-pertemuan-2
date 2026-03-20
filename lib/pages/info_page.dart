@@ -21,6 +21,21 @@ class InfoPage extends StatelessWidget {
               'Halaman ini tidak menyimpan state yang berubah.',
               style: TextStyle(fontSize: 16),
             ),
+            
+            Text(
+              'Nama : Silfi Nur Halimah',
+              style: TextStyle(fontSize: 18),
+            ),
+
+            Text(
+              'NIM : 2306137',
+              style: TextStyle(fontSize: 18),
+            ),
+
+            Text(
+              'Kelas : Informatika - E',
+              style: TextStyle(fontSize: 18),
+            ),
           ],
         ),
       ),
