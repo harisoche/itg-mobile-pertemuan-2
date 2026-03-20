@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Navigation Demo',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
+      // Saya mengubah tema aplikasi dengan menggunakan Material 3 dan memberikan warna utama yang cerah agar tampilan lebih menarik.
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: const Color.fromARGB(255, 63, 171, 181)),
 
       // halaman utama yang ditampilkan saat aplikasi dijalankan
       initialRoute: '/',
@@ -35,7 +36,8 @@ class HomeMenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menu')),
+      // Saya menambahkan properti centerTitle dengan nilai true pada AppBar untuk memastikan bahwa judul menu berada di tengah. 
+      appBar: AppBar(title: const Text('Menu'), centerTitle: true, titleTextStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
