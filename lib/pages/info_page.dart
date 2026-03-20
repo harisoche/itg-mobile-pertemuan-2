@@ -13,7 +13,7 @@ class InfoPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
-              'Ini StatelessWidget',
+              'kipli',
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
