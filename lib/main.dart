@@ -16,10 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Navigation Demo',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.indigo),
-
-      // halaman utama yang ditampilkan saat aplikasi dijalankan
       initialRoute: '/',
-      // daftar rute yang tersedia dalam aplikasi
       routes: {
         '/': (context) => const HomeMenuPage(),
         routeInfo: (context) => const InfoPage(),
@@ -42,16 +39,12 @@ class HomeMenuPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, MyApp.routeInfo);
-              },
+              onPressed: () => Navigator.pushNamed(context, MyApp.routeInfo),
               child: const Text('Buka Stateless Page'),
             ),
             const SizedBox(height: 12),
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, MyApp.routeCounter);
-              },
+              onPressed: () => Navigator.pushNamed(context, MyApp.routeCounter),
               child: const Text('Buka Stateful Page'),
             ),
           ],
