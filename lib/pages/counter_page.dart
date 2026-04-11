@@ -11,6 +11,7 @@ class _CounterPageState extends State<CounterPage> {
   int count = 0;
 
   void tambah() => setState(() => count++);
+  void kurang() => setState(() { if (count > 0) count--; });
   void reset() => setState(() => count = 0);
 
   @override
@@ -31,10 +32,46 @@ class _CounterPageState extends State<CounterPage> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                ElevatedButton(onPressed: tambah, child: const Text('Tambah')),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  ),
+                  onPressed: tambah,
+                  child: const Text('Tambah'),
+                ),
                 const SizedBox(width: 12),
-                OutlinedButton(onPressed: reset, child: const Text('Reset')),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  ),
+                  onPressed: kurang,
+                  child: const Text('Kurang'),
+                ),
+                const SizedBox(width: 12),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  ),
+                  onPressed: reset,
+                  child: const Text('Reset'),
+                ),
               ],
+            ),
+            const SizedBox(height: 24),
+            Text(
+              count == 0
+                  ? 'Counter tidak bisa kurang dari 0'
+                  : 'Tekan Kurang untuk decrement',
+              style: TextStyle(
+                fontSize: 13,
+                color: count == 0 ? Colors.red : Colors.grey,
+              ),
             ),
           ],
         ),
